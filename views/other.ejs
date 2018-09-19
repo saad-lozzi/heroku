@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>other list</title>
+        <style>
+            a {text-decoration: none; color: black;}
+        </style>
+    </head>
+
+    <body>
+        <h1>Ma other list</h1>
+
+        <ul>
+        <% olist.forEach(function(other, index) { %>
+            <li><a href="/other/supprimer/<%= index %>">✘</a> <%= other %></li>
+        <% }); %>
+        </ul>
+
+        <form action="/other/ajouter/" method="post">
+            <p>
+                <label for="newother">Que dois-je faire ?</label>
+                <input type="text" name="newother" id="newother" autofocus />
+                <input type="submit" />
+            </p>
+        </form>
+    </body>
+</html>

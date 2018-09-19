@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>List of things that you shouldn't do</h1>
+			<ul>
+			<% nottodolist.forEach(function(nottodo, index){ %>
+			<li>
+				<a href="/nottodo/supprimer/<%= index %> "> ✘ </a> <%= nottodo %> </li>
+			</li>
+		</ul>
+		<% }); %>
+		<form action="/nottodo/ajouter/" method="post">
+			<input type="text" name="newnottodo" id="newnottodo"/>
+			<input type="submit"/>
+			
+		</form>
+	
+	</body>
+</html> 

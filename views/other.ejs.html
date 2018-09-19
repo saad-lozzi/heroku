@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>List of other things to do</h1>
+			<ul>
+			<% olist.forEach(function(other, index){ %>
+			<li>
+				<a href="/other/supprimer/<%= index %> "> ✘ </a> <%= other %> </li>
+			</li>
+		</ul>
+		<% }); %>
+		<form action="/other/ajouter/" method="post">
+			<input type="text" name="newother" id="newother"/>
+			<input type="submit"/>
+			
+		</form>
+	
+	</body>
+</html> 
