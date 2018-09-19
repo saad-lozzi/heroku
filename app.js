@@ -92,6 +92,6 @@ on en crée une vide sous forme d'array avant la suite */
     res.redirect('/todo');
 })
 
-.listen(8080, function(req,res){
+.listen(process.env.PORT || 8080, function(req,res){
     console.log("Listening to port 8080...")
 });
